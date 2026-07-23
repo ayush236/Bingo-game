@@ -1,0 +1,73 @@
+.bingo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  margin-top: 20px;
+}
+
+.bingo-status {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.bingo-letters {
+  color: #e63946;
+  letter-spacing: 4px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 60px);
+  grid-gap: 10px;
+  margin-bottom: 20px;
+}
+
+.box {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #f8f9fa;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+/* Color change when selected */
+.box.selected {
+  background-color: #4caf50;
+  color: white;
+  border-color: #2e7d32;
+  transform: scale(0.95);
+}
+
+.win-message {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2e7d32;
+  margin-bottom: 15px;
+  animation: pop 0.3s ease-in-out;
+}
+
+.reset-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.2s;
+}
+
+.reset-btn:hover {
+  background-color: #0056b3;
+}
